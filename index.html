@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Sigmar+One&display=swap" rel="stylesheet">    <title>Corona hunt</title>
+</head>
+<body>
+    
+
+    <nav class="main-nav">
+        <h1>Corona <span class="beating-hunt" >HUNT</span> </h1>
+
+        <p>a project by <a href="http://jacobmoya.com#main-project-link" style="width:auto; color: white;">Jacob Moya</a></p>
+    </nav>
+
+    <div class="sky">
+
+
+        <button class="play-again">Play Again ?</button>
+
+        <!-- <div class="roundInd">
+            <h1>Round <span class='roundNum'>1</span></h1>
+            <button class="start">Start</button>
+        </div>     -->
+        <img class='dancer' src="IMGS/dancingWin.gif" alt="">
+        <img class='moon' src="IMGS/moon.jpg" alt="">
+        <img class='ufo' src="IMGS/ufo.png" alt="">
+        <img class='x' src="IMGS/crosshairs.png" alt="">
+        <img  class='flash' src="IMGS/flash.png" alt="">
+
+        <audio id="myAudioCelebrate">
+            <source src="SOUNDS/celebrateMusic.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudio">
+            <source src="SOUNDS/gunshot.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudioEmpty">
+            <source src="SOUNDS/emptyshot.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudioReload">
+            <source src="SOUNDS/reloadsound.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudioCough">
+            <source src="SOUNDS/cough.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudioUfo">
+            <source src="SOUNDS/hover.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudioBoom">
+            <source src="SOUNDS/ufoBom.mp3" type="audio/ogg">
+        </audio>
+
+
+        <img  class='cityScape' src="IMGS/cityscape.png" alt="">
+
+
+    </div>
+    <div class="ground">
+        <div class="shot count">
+            <h1>Shots</h1>
+            <h1 class='empty-shot' style=" color: red;">RELOAD !</h1>
+
+            <div class="shot-container">
+                <i class='fas fa-syringe one' style='text-shadow: 0 0 1rem white;color:red'></i>
+                <i class='fas fa-syringe two' style='color:red'></i>
+                <i class='fas fa-syringe three' style='color:red'></i>
+
+            </div>
+        </div>
+        <div class="hit count">
+            <div class="hits">
+                <h1>Hits</h1>
+                <div class="hits-container">
+                    <i class='fas fa-lungs-virus one'><h1 class="check-lung one"></h1></i>
+                    <i class='fas fa-lungs-virus two'><h1 class="check-lung two"></h1></i>
+                    <i class='fas fa-lungs-virus three'><h1 class="check-lung three"></h1></i>
+                    <i class='fas fa-lungs-virus four'><h1 class="check-lung four"></h1></i>
+                    <i class='fas fa-lungs-virus five'><h1 class="check-lung five"></h1></i>
+                    <i class='fas fa-lungs-virus six'><h1 class="check-lung six"></h1></i>
+                    <i class='fas fa-lungs-virus seven'><h1 class="check-lung seven"></h1></i>
+                    <i class='fas fa-lungs-virus eight'><h1 class="check-lung eight"></h1></i>
+                    <i class='fas fa-lungs-virus nine'><h1 class="check-lung nine"></h1></i>
+                    <i class='fas fa-lungs-virus ten'><h1 class="check-lung ten"></h1></i>
+                </div>
+            </div>
+            <div class="decor">
+                |||||||||||||||||||||||||||||||||||||||||||
+            </div>
+        </div>
+        <div class="score count">
+            <h1>
+                score
+            </h1>
+            <h1 class="score-count">
+                0000
+            </h1>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

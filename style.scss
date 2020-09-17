@@ -1,0 +1,414 @@
+@mixin flexedCenter {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sigmar One', cursive;        
+    box-sizing: border-box;
+
+}
+
+body{
+    @include flexedCenter();
+    background: url('./IMGS/3319.jpg') ;
+    background-size: 100% 100vh;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+
+
+    nav{
+        @include flexedCenter();
+        justify-content: space-between;
+        font-family: 'Sigmar One', cursive;        
+        background: linear-gradient(to right,#8300F1);
+        width: 100%;
+        height: 10vh;
+        text-align: center;
+        padding: .5rem;
+        h1{
+            color: white;
+            .beating-hunt{
+                font-size: 2rem; 
+                text-shadow: 0 0 1rem red;
+                animation: beating 3s 3s infinite forwards ;
+                color: pink;
+            }
+        }
+    }
+
+    .sky{
+        @include flexedCenter();
+        cursor: none;
+        align-items: flex-end;
+        width: 100%;
+        height: 60vh;
+        position: relative;
+        border: 10px solid #080039;
+        overflow: hidden;
+
+        .play-again{
+            width: 10rem;
+            height: 5rem;
+            top: 40%;
+            left: 45%;
+            position: absolute;
+            z-index: 10;
+            border-radius: 1rem;
+            display: none;
+        }
+
+        img{
+            position: absolute;
+            user-select: none;
+        }
+
+        .dancer{
+            bottom:0%;
+            right: 10%;
+            height: 25rem;
+            animation: dancingMan 6s infinite 0s;
+            display: none;
+
+        }
+
+        .ufo{
+            height: 2rem;
+            width: 4rem;
+            bottom: 0%;
+            left: 0%;
+            z-index: 10;
+            display: none;
+  
+        }
+
+        .moon{
+            left: 25%;
+            height: 5rem;
+            top: 10%;
+            z-index: 11;
+        }
+
+        i{  
+            font-size: 2rem;
+            position: absolute;
+            top:100%;
+            left: 50%;
+            color: greenyellow;
+            animation: upupaway 6s infinite 0s;
+
+            &:active{
+                color: red;
+
+            }
+        }
+
+        .two{
+            margin-left: 40rem;
+        }
+        .x{
+            z-index: 2;
+            transition: all ease ;
+            height: 4rem;
+            width: 4rem;
+        }
+
+        .flash{
+            z-index: 2;
+            display: none;
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+        }
+
+        &:active .flash{
+            @include flexedCenter();
+            transform: rotate(30deg);
+            opacity: .5;
+        }
+
+        .cityScape{
+            z-index: 1;
+            width: 100%;
+            position: relative;
+        }
+
+        .roundInd{
+            cursor: pointer;
+            @include flexedCenter();
+            flex-direction: column;
+            z-index: 11;
+            left: 25%;
+            bottom: 10%;
+            position: absolute;
+            background: #8300F1;
+            border-radius: 1rem;
+            border: .25rem solid #080039 ;
+            color: white;
+            overflow: hidden;
+            height: 20rem;
+            width: 50%;
+            @include flexedCenter();
+    
+            h1{
+                margin-top: 15%;
+                height: 5rem;
+                text-align: center;
+            }
+            button{
+                cursor: pointer;
+            }
+        }
+    
+
+    }
+
+    .croud{
+        z-index: 5;
+        width: 100%;
+        height: 0rem;
+        @include flexedCenter();
+        flex-direction: row;
+        flex-wrap: nowrap;
+        img{
+            width: 55%;
+            height: 30vh;
+            margin-bottom:25vh;
+        }
+    }
+
+
+    .ground{
+        @include flexedCenter();
+        justify-content: space-evenly;
+        background: url('./IMGS/road.jpg');
+        background-size: 100% 100%;
+        width: 100%;
+        height: 30vh;
+
+
+        .count{
+            @include flexedCenter();
+            flex-direction: column;
+            height: 50%;
+            width: 25%;
+            background: #080039;
+            border-radius: 1rem;
+            border: .25rem solid #8300F1;
+            color: white;
+            overflow: hidden;
+
+            .empty-shot{
+                display: none;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+
+        .shot.count{
+
+            .shot-container{
+                @include flexedCenter();
+                justify-content: space-evenly;
+                width: 100%;
+                i{
+                    font-size: 2rem;
+                }
+            }
+
+        }
+
+        .hit.count{
+            width: 40%;
+            .hits{
+                @include flexedCenter();
+                justify-content: space-evenly;
+                width: 100%;
+                .hits-container{
+
+                    
+                    width: 50%;
+                    i{
+                        font-size: 1rem;
+                        color:#F76BD3;
+                        position: relative;
+                    }
+                    .check-lung{
+                        color: lime;
+                        position: absolute;
+                        top:10%;
+                        left: 15%;
+                        font-size: 1rem;
+                    }
+                }
+                h1{
+                    text-align: center;
+                    width: 50%;
+                }
+            }
+            .decor{
+                @include flexedCenter();
+                justify-content: space-evenly;
+                width: 100%;
+                letter-spacing: .1rem;
+
+            }
+        }
+
+        .score.count{
+            h1{
+                @include flexedCenter();
+                height: 50%;
+            }
+
+        }
+
+    }
+
+}
+
+@keyframes beating {
+    0%{
+        font-size: 2rem;
+    }
+    20%{
+        font-size: 2.5rem;
+    }
+    40%{
+        font-size: 2rem;
+    }
+    60%{
+        font-size: 2.5rem;
+    }
+    80%{
+        font-size: 2rem;
+    }
+
+}
+
+@keyframes upupaway {
+    0%{
+        opacity: 0;
+        margin-left: 0rem;
+
+    }
+    35%{
+        opacity: .8;
+        margin-left: -2rem;
+
+    }
+    40%{
+        z-index: 10;
+        opacity: 1;
+        z-index: 10;
+
+    }
+    40%{
+        margin-left: 1rem ;
+    }
+
+    
+    100%{
+        top: -25%;
+    }
+}
+
+@keyframes ufoGo {
+    0%{
+        left: 0%;
+        bottom: 100%;
+
+    }
+    10%{
+        left: 100%;
+        bottom: 90%;
+    }
+    20%{
+        left: 0%;
+        bottom: 60%;
+        
+    }
+    30%{
+        left: 90%;
+        bottom: 40%;
+    }
+    40%{
+        left: 0%;
+        bottom: 20%;
+        
+    }
+    50%{
+        left: 90%;
+        bottom: 0%;
+        
+    }
+    60%{
+        left: 0%;
+        bottom: 20%;
+        
+    }
+    70%{
+        left: 90%;
+        bottom: 40%;
+        
+    }
+    80%{
+        left: 0%;
+        bottom: 60%;
+        
+    }
+    90%{
+        left: 90%;
+        bottom: 80%;
+    }
+    100%{
+        left: 0%;
+        bottom: 120%;
+    }
+}
+
+@keyframes dancingMan {
+    0%{
+        bottom: 0%;
+        right: 10%;
+        transform: rotate(0deg);
+    }
+    20%{
+        bottom: 0%;
+        right: 15%;
+        transform: rotate(10deg);
+
+    }
+    40%{
+        bottom: 0%;
+        right: 10%;
+        transform: rotate(-10deg);
+
+    }
+    60%{
+        bottom: 0%;
+        right: 15%;
+        transform: rotate(10deg);
+
+    }
+    80%{
+        bottom: 0%;
+        right: 10%;
+        transform: rotate(-10deg);
+
+    }
+
+
+    
+}
+
+
+
